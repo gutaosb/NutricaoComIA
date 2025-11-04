@@ -23,27 +23,35 @@ A geração dos cardápios é feita através da **API do Gemini AI (Google)**, e
 nutri-ai/
 │
 ├── backend/
+│   ├── __init__.py
 │   ├── app.py
 │   ├── requirements.txt
 │   ├── utils/
-│   │   ├── gerar_pdf.py
-│   │   └── calcular_tmb.py
+│   │   ├── __init__.py
+│   │   ├── constants.py
 │   ├── services/
-│   │   └── gemini_service.py
+│   │   ├── __init__.py
+│   │   ├── ai_service.py
+│   │   └── pdf_service.py
 │   └── .env
 │
 ├── frontend/
 │   ├── index.html
 │   ├── vite.config.js
 │   ├── package.json
+│   ├── eslint.config.js
 │   ├── src/
 │   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── index.css
 │   │   ├── components/
 │   │   │   ├── InputField.jsx
-│   │   │   ├── SelectField.jsx
 │   │   │   └── LoadingSpinner.jsx
-│   │   └── pages/
+│   │   ├── pages/
+│   │   │   ├── ResultPage.jsx
 │   │       └── HomePage.jsx
+│   │   ├── services/
+│   │   └── api.js
 │   └── .env
 │
 └── README.md
@@ -67,7 +75,7 @@ pip install -r requirements.txt
 Crie um arquivo `.env` com a variável de ambiente:
 
 ```
-GEMINI_API_KEY=coloque_sua_chave_aqui
+GOOGLE_API_KEY=coloque_sua_chave_aqui
 ```
 
 Inicie o servidor:
@@ -113,4 +121,4 @@ Este projeto é de uso livre para fins educacionais e pessoais.
 
 ---
 
-💡 **Feito com ❤️ por [Seu Nome]**
+💡 **Feito por Augusto S. Bortoloti**
